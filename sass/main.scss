@@ -36,6 +36,12 @@
     }
 }
 
+h1, h2{
+    color: $darkPurple;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
 /*
  * DARK MODE BUTTOM
  */
@@ -48,51 +54,51 @@
 }
 
 .dark-theme-label{
-margin-right: 20px;
-display: flex;
-align-items: center;
-color: #f0f2f5;
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    color: #f0f2f5;
 }
 
 .dark-theme-input[type="checkbox"]{
-margin: 0;
-visibility: hidden;
+    margin: 0;
+    visibility: hidden;
 }
 
 .dark-theme-input[type="checkbox"]:checked + span{
-background-color: $darkColor;
+    background-color: $darkColor;
 }
 
 .dark-theme-input[type="checkbox"]:checked + span:After{
-left: 22px;
+    left: 22px;
 }
 
 .dark-theme-span{
-background-color: #ddd;
-display: inline-block;
-border-radius: 10px;
-transition: all .2s;
-position: relative;
-margin-right: 5px;
-height: 20px;
-width: 40px;
+    background-color: #ddd;
+    display: inline-block;
+    border-radius: 10px;
+    transition: all .2s;
+    position: relative;
+    margin-right: 5px;
+    height: 20px;
+    width: 40px;
 }
 
 .dark-theme-span:after{
-background-color: $darkPurple;
-display: inline-block;
-position: absolute;
-transition: all .2s;
-border-radius: 50%;
-height: 16px;
-content: '';
-width: 16px;
-left: 3px;
-top: 2px;
+    background-color: $darkPurple;
+    display: inline-block;
+    position: absolute;
+    transition: all .2s;
+    border-radius: 50%;
+    height: 16px;
+    content: '';
+    width: 16px;
+    left: 3px;
+    top: 2px;
 }
 
 .dark-theme-span:hover:after{
-cursor: pointer;
+    cursor: pointer;
 }
 
 
@@ -102,37 +108,42 @@ body {
     font-size: 16px;
     scroll-behavior: smooth;
     background: linear-gradient(to bottom, $darkPurple, $lightPurple);
+    height: 100%;
+
+    .navbar{
+        background-color: rgba(0, 0, 0, 0.309);
+
+        .logo__link{
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            
+            img{
+                width: 50px;
+            }
+            h1{
+                margin: 0 0 0 .5rem;
+                color: white;
+                font-size: 1.5rem;
+                text-transform: uppercase;
+            }
+        }
+
+        .collapse.navbar-collapse{
+            position: relative;
+        }
+    }
 
     .app{
         padding: 0;
         
+
         .header{
             height: 100vh;
             position: relative;
             overflow: hidden;
     
-            .navbar{
-    
-                .logo__link{
-                    display: flex;
-                    align-items: center;
-                    text-decoration: none;
-                    
-                    img{
-                        width: 50px;
-                    }
-                    h1{
-                        margin: 0 0 0 .5rem;
-                        color: white;
-                        font-size: 1.5rem;
-                        text-transform: uppercase;
-                    }
-                }
-
-                .collapse.navbar-collapse{
-                    position: relative;
-                }
-            }
+            
             .header__presentation{
                 height: 80vh;
                 position: absolute;
@@ -156,11 +167,6 @@ body {
                     position: absolute;
                     top: 25%;
     
-                    h1{
-                        color: $darkPurple;
-                        font-weight: bold;
-                        font-size: 3rem;
-                    }
                     p{
                         color: $textColor;
                         font-size: 1.2rem;
@@ -171,10 +177,69 @@ body {
         .main{
             width: 100%;
             background-color: $lightColor;
-            height: 100vh;
+            height: max-content;
             margin-bottom: 5rem;
             border-bottom-left-radius: 50px;
             border-bottom-right-radius: 50px;
+            padding: 3rem;
+
+            .section-timeline{
+                .section-timeline__title{
+                    padding: 2rem 0;
+                    display: flex;
+                    text-align: center;
+                    width: 80%;
+                    margin: auto;
+                }
+                .section-timeline__container{
+                    display: flex;
+                    margin-top: 5rem;
+                    position: relative;
+
+                    ul{
+
+                        &:before{
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            width: 2px;
+                            height: 100%;
+                            background-color: red;
+                        }
+                        li{
+                            width: calc(100%/2);
+
+                        }
+                    }
+
+                    .section-timeline__item{
+                        width: calc(100%/2);
+
+                        &:nth-child(odd){
+                            display: flex;
+                            flex-direction: row-reverse;
+                            
+                            .timeline-item__container{
+                                margin: 1rem 2rem 1rem 0;
+                            }
+                        }
+
+                        &:nth-child(even){
+                            margin-top: 5rem;
+                            margin: 1rem 0 1rem 2rem;
+                        }
+
+                        .timeline-item__icon{
+                            i {
+                                font-size: 2rem;
+                            }
+                        }
+
+                    }
+                }
+            }
         }
     }
 
@@ -198,34 +263,47 @@ body {
 }
 
 
-@include media-breakpoint-only(xs) {
+@media (max-width: 992px) {
     body{
+        background: rgb(70, 82, 176);
+
+        .navbar{
+            background-color: transparent;
+            z-index: 2;
+        }
+
         .app{
             .header{
                 height: initial;
                 position: initial;
                 overflow: initial;
 
-                .navbar{
-                    background: $darkPurple !important;
-                    z-index: 2;
-                }
                 .header__presentation{
                     position: initial;
                     margin-top: 5rem;
+                    padding: 1rem;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
         
                     img{
                         position: initial;
-                        width: 100%;
+                        width: 60%;
+                        margin: auto;
                     }
         
                     .header-presentation__container{
                         width: 100%;
-                        padding: 1rem;
+                        padding: 0;
                         position: initial;
                     }
                 }
-            }   
+            }
+            .main{
+                padding: 1rem;
+            }
+               
         }
     }
 }
