@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "sass": "npx node-sass sass/ -o dist/css/ --output-style compressed -w",
+    "sass": "npx node-sass sass/ -o dist/css/ --output-style -w",
     "purge": "purgecss --css dist/css/main.css --content dist/index.html --output dist/css/main.min.css"
   },
   "keywords": [],
