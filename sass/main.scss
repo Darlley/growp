@@ -111,7 +111,7 @@ body {
     height: 100%;
 
     .navbar{
-        background-color: rgba(0, 0, 0, 0.309);
+        background-color: #0000004f;
 
         .logo__link{
             display: flex;
@@ -215,10 +215,14 @@ body {
                             width: 50%;
                             position: relative;
                             padding: 2rem;
-                            animation: bg-anima 5s ease-in-out infinite;
-                            -webkit-animation: bg-anima 5s ease-in-out infinite;
-                            -moz-animation: bg-anima 5s ease-in-out infinite;
                             color: white;
+
+                            
+                            background: linear-gradient(to left, #6576ff, #948aff);
+                            animation: anima 3s ease-in-out infinite;
+                            -webkit-animation: anima 3s ease-in-out infinite;
+                            -moz-animation: anima 3s ease-in-out infinite;
+                            background-size: 200% 200%;
 
                             .section-timeline__item{
                                 width: 100%;
@@ -234,7 +238,7 @@ body {
                             }
 
                             &:nth-child(odd) {
-                                background: linear-gradient(to left, #6576ff, #948aff);
+
                                 float: left;
                                 clear: right;
                                 transform: translateX(-30px);
@@ -246,7 +250,6 @@ body {
                                 }
                             }
                             &:nth-child(even) {
-                                background: linear-gradient(to right, #6576ff, #948aff);
                                 float: right;
                                 clear: left;
                                 transform: translateX(0);
@@ -279,20 +282,41 @@ body {
                                 left: -25px;
                             }
 
-                            @keyframes bg-anima {
-                                0% { background-position: 0%; }
-                                100% { background-position: 100%; }
-                            }
-                            @-webkit-keyframes bg-anima {
-                                0% { background-position: 0%; }
-                                100% { background-position: 100%; }
-                            }
-                            @-moz-keyframes bg-anima{
-                                0% { background-position: 0%; }
-                                100% { background-position: 100%; }
-                            }
                         }
                     }
+                }
+            }
+            @keyframes anima {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+            @-webkit-keyframes anima {
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
+                }
+            }
+            @-moz-keyframes anima{
+                0% {
+                    background-position: 0% 50%;
+                }
+                50% {
+                    background-position: 100% 50%;
+                }
+                100% {
+                    background-position: 0% 50%;
                 }
             }
 
@@ -476,6 +500,11 @@ body {
                     div:not(div.paymentPlans-itemContent__prices){
                         margin-top: 2rem;
                     }
+                    div:nth-child(2){
+                        h3 span{
+                            color: #128c7e;
+                        }
+                    }
                     div p {
                         font-size: .9rem;
                     }
@@ -484,7 +513,7 @@ body {
                         font-weight: bold;
                     }
                     div p strong {
-                        font-size: 1.1rem;
+                        font-size: 1.05rem;
                     }
 
                     button{
@@ -822,7 +851,7 @@ body {
 
 @media (max-width: 992px) {
     body{
-        background-color: #4652b0;
+        background: #4651b0;
 
         .navbar{
             background-color: transparent;
