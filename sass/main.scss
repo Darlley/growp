@@ -31,7 +31,7 @@
     font-weight: bold;
 
     &::selection{
-        background-color: $lightGreen;
+        background-color: $lightPurple;
         color: $lightColor;
     }
 }
@@ -419,15 +419,29 @@ body {
                 height: max-content;
                 border-radius: 8px;
                 border: 2px solid $darkPurple;
+                box-shadow: 5px 5px 15px #00000031;
 
                 .section-paymentPlans__itemTitle{
                     text-align: center;
                     padding: 1rem;
-                    background-color: $lightGreen;
+                    background: linear-gradient(to left, $lightPurple, $darkPurple);
                     color: $lightColor;
-
+                    
                     border-top-left-radius: 8px;
                     border-top-right-radius: 8px;
+                    
+                    h3{
+                        font-weight: bold;
+                    }
+                }
+
+                &:hover{
+                    transition: all .5s;
+                    transform: scale(1.025, 1.025);
+
+                    .section-paymentPlans__itemTitle{
+                        background: linear-gradient(to left, $darkPurple, $lightPurple);
+                    }
                 }
             }
             .section-paymentPlans__itemContent{
@@ -447,7 +461,7 @@ body {
                     .paymentPlans-itemContent__prices{
                         display: flex;
                         justify-content: center;
-    
+
                         p{
                             display: flex;
                             align-items: center;
@@ -506,6 +520,220 @@ body {
                 
             }
         }
+
+        .section-newPlan{
+            width: 100%;
+            margin: 6rem 0;
+            
+            .newPlan__card{
+                width: 90%;
+                margin: auto;
+                text-align: center;
+                border-radius: 8px;
+                overflow: hidden;
+                border: 2px solid $darkPurple;
+
+                position: relative;
+                
+                &:hover{
+                    .section-newPlan__title{
+                        background: linear-gradient(to left, $darkPurple, $lightPurple);
+                    }
+                }
+            }
+
+            .section-newPlan__title{
+                padding: 1rem;
+                background: linear-gradient(to left, $lightPurple, $darkPurple);
+                color: $lightColor;
+                
+                h3{
+                    z-index: 2;
+                    font-weight: bold;
+                    margin-bottom: 0;
+                }
+
+            }
+            .section-newPlan__content{
+                padding: 2rem;
+                background-color: $lightColor;
+                border: 2px solid transparent;
+
+                .newtPlan-itemContent__prices{
+                    display: flex;
+                    justify-content: center;
+
+                    p{
+                        display: flex;
+                        align-items: center;
+                        margin: 0;
+                        
+                        span{
+                            font-size: 3rem;
+                        }
+                    }
+                }
+
+                div p strong a {
+                    text-decoration: none;
+                    color: $darkPurple;
+
+                    &:hover{
+                        color: $lightGreen;
+                    }
+                }
+            }
+        }
+
+    }
+    .section-last{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 6rem 0; 
+    }
+
+    .section-form{
+        display: flex;
+        align-items: center;
+        margin: 6rem 0;
+
+        .section-form_image{
+            flex: 7;
+        }
+        .section-form__group{
+            flex: 5;
+
+            div p{
+                margin: 2rem 0;
+            }
+            div a{
+                text-decoration: none;
+                color: $darkPurple;
+                &:hover{
+                    color: $lightGreen;
+                }
+            }
+
+        }
+
+        .form{
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid $darkPurple;
+
+            legend{
+                display: none;
+            }
+
+            legend{
+                display: none;
+            }
+            .input-group{
+
+                p, input, label{
+                    width: 100%;                   
+                }
+                p{
+                    margin: 0;
+                    margin-top: 1rem;
+                }
+
+                label{
+                    color: $darkPurple;
+                    font-weight: bold;
+                    cursor: grab;
+
+                    &:active{
+                        cursor: grabbing
+                    }
+                }
+
+                input{
+                    padding: .5rem;
+                    background-color: $lightColor;
+                    border: 1px solid $darkPurple;
+                    border-radius: 4px;
+                    margin-top: .5rem;
+                    color: $darkPurple;
+
+                    &:focus{
+                        outline-color: $lightPurple;
+                    }
+                }
+
+                button{
+                    display: flex;
+                    padding: 1rem;
+                    color: $lightColor;
+                    align-items: center;
+                    justify-content: center;
+                    border: none;
+                    border-radius: 4px;
+                    width: 100%;
+                    background-color: $darkPurple;
+                    margin-top: 2rem;
+                    gap: .5rem;
+
+                    &:hover{
+                        transition: all 1s;
+                        background-color: $lightGreen;
+                        
+                        i{
+                            animation: bell .2s infinite alternate-reverse;
+                        }
+                    }
+                }
+                @keyframes bell {
+                    0%{ 
+                        transform: rotate(-30deg); 
+                    }
+                    50%{
+                        transform: rotate(0);
+                    }
+                    100%{
+                        transform: rotate(30deg);
+                    }
+                }
+                
+            }
+        }
+    }
+
+    .footer{
+        padding: 6rem 0;
+
+        background-color: $lightColor;
+        border-top-left-radius: 8px;
+        border-top-right-radius: 8px;
+
+        > div > p {
+            text-align: center;
+            color: $darkPurple;
+            cursor: grab;
+            width: max-content;
+            margin: auto;
+            
+            span{
+                position: relative;
+                z-index: 2;
+                font-size: 1.1rem;
+
+                &:hover:before{
+                    content: "";
+                    width: 100%;
+                    height: 4px;
+                    position: absolute;
+                    bottom: 4px;
+                    z-index: -1;
+
+                    background-color: $lightGreen;
+                }
+            }
+            &:active{
+                cursor: grabbing;
+            }
+        }
     }
 
     &.dark-theme{
@@ -538,6 +766,54 @@ body {
                 }
                 p{
                     color: $lightColor;
+                }
+
+            }
+            .section-paymentPlans{
+                p, h3{
+                    color: $lightColor;
+                }
+                .section-paymentPlans__itemContent{
+                    background-color: $darkColor;
+                }
+            }
+
+            .section-newPlan{
+                p, h3{
+                    color: $lightColor;
+                }
+                .section-newPlan__content{
+                    background-color: $darkColor;
+                }
+            }
+        }
+
+        .footer{
+            background-color: $darkColor;
+
+            .section-last{
+                > p{
+                    color: $lightColor;
+                }
+            }
+            .section-form{
+                .section-form__group div p{
+                    color: $lightColor;
+                }
+        
+                .form{
+                    border: 1px solid $darkPurple;
+        
+                    .input-group{
+                        input{
+                            background-color: $darkColor;
+                            color: $lightColor;
+        
+                            &:focus{
+                                outline-color: $lightPurple;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -697,6 +973,42 @@ body {
                     width: 80%;
                     max-width: 400px;
                     margin-bottom: 2rem;
+                }
+            }
+
+            .section-newPlan{
+                .newPlan__card{
+                    width: 80%;
+                    max-width: 400px;
+                }
+                .section-newPlan__content{
+                    text-align: left;
+                }
+            }
+        }
+
+        .section-form{
+            margin: 3rem 0;
+            display: flex;
+            flex-direction: column-reverse;
+            text-align: center;
+            
+            .section-form_image{
+                flex: 12;
+                width: 100%;
+            }
+            .section-form__group{
+                flex: 12;
+            }
+    
+            .form{
+                padding: 2rem;
+                margin: 3rem 0;
+                border-radius: 8px;
+                border: 1px solid $darkPurple;
+
+                .input-group{
+                    text-align: left;
                 }
             }
         }
