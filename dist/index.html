@@ -6,19 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Growp</title>
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/main.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Molengo&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar">
-
+    <nav class="fixed-top navbar navbar-expand-lg navbar-dark">
         <div class="container">
-
             <a class="logo logo__link" href="#">
                 <img src="img/logo-growp.png" alt="" class="d-inline-block align-text-top">
                 <h1>Growp</h1>
@@ -30,396 +26,393 @@
             <div class="collapse navbar-collapse justify-content-lg-end" id="navbarSupportedContent">
                 <div class="navbar-nav">
                     <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link" href="#">Features</a>
-                    <a class="nav-link" href="#">Pricing</a>
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-                </div>
-                <div class="container-checkbox justify-content-sm-start">
-                    <label class="dark-theme-label">
-                        <input class="dark-theme-input" type="checkbox" data-js="input">
-                        <span class="dark-theme-span"></span>
-                        Dark Theme
-                    </label>
+                    <a class="nav-link active" href="#">Features</a>
+                    <a class="nav-link active" href="#">Pricing</a>
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Dashboard</a>
                 </div>
             </div>
         </div>
+        <div class="navbar-filter"></div>
     </nav>
-    <div class="container-xxl app">
+    
+    <header class="header">
+        <div class="hader__banner">
+            <div class="banner__filter"></div>
 
-        <header class="header">
-            <div class="hader__banner">
-                <div class="banner__filter"></div>
+            <picture>
+                <!-- <source media="(min-width:650px)" srcset="img_pink_flowers.jpg"> -->
+                <source media="(max-width: 700px)" srcset="img/banner-600x400.png">
+                <source media="(max-width:1600px)" srcset="img/banner-1600x600.png">
+                <img src="img/banner-3000x400.jpg" alt="Flowers" style="width:auto;">
+            </picture>
+        </div>
+        <div class="header__presentation container-xxl">
+            <div class="header__container">
+                <div class="header-presentation__container">
+                    <h1>Lançamentos Automatizados em Grupos no Whatsapp</h1>
+                    <p>A única ferramenta que automatiza todas as tarefas do seu lançamento em Grupos via Whatsapp. Seja Um <span class="marquee">Lançamento Meteórico, Possuído, Monstruoso</span> ou qualquer lançamento que utiliza estratégias de conversão em grupos no WhatsApp, o Growp Automatiza.</p>
+                </div>
 
-                <picture>
-                    <!-- <source media="(min-width:650px)" srcset="img_pink_flowers.jpg"> -->
-                    <source media="(max-width: 700px)" srcset="img/banner-mobile.png">
-                    <img src="img/banner-desktop.png" alt="Flowers" style="width:auto;">
-                </picture>
+                <div class="growp-app">
+                    <img src="img/dashboard-growp-desktop.png" alt="Flowers" style="width:auto;" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">
+
+                    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                        <div class="modal-dialog modal-dialog-centered">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="img/dashboard-growp-desktop.png" alt="Flowers" style="width:auto;">
+                            </div>
+                          </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="header__presentation">
-                <div class="header__container">
+        </div>
+    </header>
 
-                    <div class="header-presentation__container">
-                        <h1>Lançamentos Automatizados em Grupos no Whatsapp</h1>
-                        <p>A única ferramenta que automatiza todas as tarefas do seu lançamento em Grupos via Whatsapp. Seja Um <span class="marquee">Lançamento Meteórico, Possuído, Monstruoso</span> ou qualquer lançamento que utiliza estratégias de conversão em grupos no WhatsApp, o Growp Automatiza.</p>
+    <div class="app">
+        <div class="container-xxl">
+            <main class="main container-xxl">
+                <section class="section-timeline">
+                    <div class="section-timeline__title">
+                        <h2>Automatize seus Lançamentos em 4 Passo Simples.</h2>
                     </div>
-                </div>
-            </div>
-        </header>
-        <main class="main">
-            <section class="section-timeline">
-                <div class="section-timeline__title">
-                    <h2>Automatize seus Lançamentos em 4 Passo Simples.</h2>
-                </div>
 
-                <div class="section-timeline__container">
+                    <div class="section-timeline__container">
 
-                    <ul>
-                        <li>
-                            <div class="section-timeline__item">
-                                <div class="timeline-item__icon">
-                                    <i class="fa fa-mobile"></i>
+                        <ul>
+                            <li>
+                                <div class="section-timeline__item">
+                                    <div class="timeline-item timeline-item__icon">
+                                        <i class="fa fa-mobile"></i>
+                                    </div>
+                                    <div class="timeline-item timeline-item__container">
+                                        <h3>1) INTEGRAR WHATSAPP</h3>
+                                        <p>No primeira Etapa Integramos uma conta de Whatsapp ao Growp, é esta conta que vai enviar mensagens, alterar nomes dos grupos, habilitar e desabilitar interações nos grupos...</p>
+                                    </div>
                                 </div>
-                                <div class="timeline-item__container">
-                                    <h3>INTEGRAR WHATSAPP</h3>
-                                    <span>1º Passo</span>
-                                    <p>No primeira Etapa Integramos uma conta de Whatsapp ao Growp, é esta conta que vai enviar mensagens, alterar nomes dos grupos, habilitar e desabilitar interações nos grupos...</p>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li>
-                            <div class="section-timeline__item">
-                                <div class="timeline-item__icon">
-                                    <i class="fa fa-rocket"></i>
+                            <li>
+                                <div class="section-timeline__item">
+                                    <div class="timeline-item__icon">
+                                        <i class="fa fa-rocket"></i>
+                                    </div>
+                                    <div>
+                                        <h3>2) CRIAR UM LANÇAMENTO</h3>
+                                        <p>No segunda etapa criamos um evento, é onde vamos importar os grupos e criaremos as tarefas, além disso o evento vai gerar uma url para divulgarmos o nosso Lançamento.</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3>CRIAR UM LANÇAMENTO</h3>
-                                    <span>2º Passo</span>
-                                    <p>No segunda etapa criamos um evento, é onde vamos importar os grupos e criaremos as tarefas, além disso o evento vai gerar uma url para divulgarmos o nosso Lançamento.</p>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li>
-                            <div class="section-timeline__item">
-                                <div class="timeline-item__icon">
-                                    <i class="fa fa-users"></i>
+                            <li>
+                                <div class="section-timeline__item">
+                                    <div class="timeline-item__icon">
+                                        <i class="fa fa-users"></i>
+                                    </div>
+                                    <div>
+                                        <h3>3) IMPORTAR GRUPOS</h3>
+                                        <p>Agora Vamos importar os grupos que estarão disponiveis em nosso evento, onde vamos captar os leads, o link do evento vai redirecionar para os grupos conforme eles vão enchendo.</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3>IMPORTAR GRUPOS</h3>
-                                    <span>3º Passo</span>
-                                    <p>Agora Vamos importar os grupos que estarão disponiveis em nosso evento, onde vamos captar os leads, o link do evento vai redirecionar para os grupos conforme eles vão enchendo.</p>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
 
-                        <li>
-                            <div class="section-timeline__item">
-                                <div class="timeline-item__icon">
-                                    <i class="fa fa-calendar-alt"></i>
+                            <li>
+                                <div class="section-timeline__item">
+                                    <div class="timeline-item__icon">
+                                        <i class="fa fa-calendar-alt"></i>
+                                    </div>
+                                    <div>
+                                        <h3>4) CRIAR TABELAS</h3>
+                                        <p>A Parte mágica do Growp. Nesta etapa da nossa implementação, vamos agendar as tarefas, definindo dia e hora, e o Growp vai automatizar em todos os grupos do lançamento.</p>
+                                    </div>
                                 </div>
-                                <div>
-                                    <h3>CRIAR TABELAS</h3>
-                                    <span>4º Passo</span>
-                                    <p>A Parte mágica do Growp. Nesta etapa da nossa implementação, vamos agendar as tarefas, definindo dia e hora, e o Growp vai automatizar em todos os grupos do lançamento.</p>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
+                            </li>
+                        </ul>
 
-                </div>
-            </section>
-
-            <section class="section-description">
-                <div class="section-description__container">
-                    <div class="description-container__item description-container__text">
-                        <h3>Potencializador De Resultados</h3>
-                        <p>As Estratégias já existem e são muito lucrativas. Com certeza você sabe o poder dos lançamentos que utilizam estratégias de conversão no whatsapp, no entanto, você sabe ou pode imaginar o quanto é difícil gerenciar esse tipo de lançamento quando precisamos escalar e aumentar o volume de leads que consequentemente aumenta o numero de grupos, e como efeito colateral exige mais pessoas na equipe para executar as tarefas necessárias durante o lançamento.</p>
                     </div>
-                    <div class="description-container__item description-container__image">
-                        <img src="img/home-description-1.svg" alt="">
-                    </div>
-                </div>
+                </section>
 
-                <div class="section-description__container">
-                    <div class="description-container__item description-container__text">
-                        <h3>Liberdade durante o Lançamento</h3>
-                        <p>O Growp é um Orquestrador que Automatiza todas as tarefas, seja 1 ou 1000 Grupos. você vai ter liberdade para apresentar o seu produto ou serviço enquanto o Growp faz o trabalho exaustivo. Então faça lançamentos para centenas ou milhares de grupos com a tranquilidade que é fazer para apenas 1 grupo. A diferença será seu faturamento, além de diminuir custos com equipe que faria manualmente todas as tarefas.</p>
+                <section class="section-description">
+                    <div class="section-description__container">
+                        <div class="description-container__item description-container__text">
+                            <h3>Potencializador De Resultados</h3>
+                            <p>As Estratégias já existem e são muito lucrativas. Com certeza você sabe o poder dos lançamentos que utilizam estratégias de conversão no whatsapp, no entanto, você sabe ou pode imaginar o quanto é difícil gerenciar esse tipo de lançamento quando precisamos escalar e aumentar o volume de leads que consequentemente aumenta o numero de grupos, e como efeito colateral exige mais pessoas na equipe para executar as tarefas necessárias durante o lançamento.</p>
+                        </div>
+                        <div class="description-container__item description-container__image">
+                            <img src="img/section-woman-1.png" alt="">
+                        </div>
                     </div>
-                    <div class="description-container__item description-container__image">
-                        <img src="img/home-description-2.svg" alt="">
-                    </div>
-                </div>
 
-                <div class="section-description__container">
-                    <div class="description-container__item description-container__text">
-                        <h3>Lançamento Descomplicado</h3>
-                        <p>Você vai agendar todas as tarefas do seu lançamento e no dia e hora que você definir, de uma forma descomplicado o Growp vai executar automaticamente todas as tarefas te permitindo escalar o seu lançamento e potencializar seus resultados.</p>
+                    <div class="section-description__container">
+                        <div class="description-container__item description-container__text">
+                            <h3>Liberdade durante o Lançamento</h3>
+                            <p>O Growp é um Orquestrador que Automatiza todas as tarefas, seja 1 ou 1000 Grupos. você vai ter liberdade para apresentar o seu produto ou serviço enquanto o Growp faz o trabalho exaustivo. Então faça lançamentos para centenas ou milhares de grupos com a tranquilidade que é fazer para apenas 1 grupo. A diferença será seu faturamento, além de diminuir custos com equipe que faria manualmente todas as tarefas.</p>
+                        </div>
+                        <div class="description-container__item description-container__image">
+                            <img src="img/section-woman-2.png" alt="">
+                        </div>
                     </div>
-                    <div class="description-container__item description-container__image">
-                        <img src="img/home-description-3.svg" alt="">
+
+                    <div class="section-description__container">
+                        <div class="description-container__item description-container__text">
+                            <h3>Lançamento Descomplicado</h3>
+                            <p>Você vai agendar todas as tarefas do seu lançamento e no dia e hora que você definir, de uma forma descomplicado o Growp vai executar automaticamente todas as tarefas te permitindo escalar o seu lançamento e potencializar seus resultados.</p>
+                        </div>
+                        <div class="description-container__item description-container__image">
+                            <img src="img/section-men-1.png" alt="">
+                        </div>
                     </div>
-                </div>
-            </section>
-            
-            <section class="section-about">
-                <div class="section-about__title">
-                    <h2>O Que o Growp Faz</h2>
-                    <p>Do <span class="marquee">Básico</span> ao <span class="marquee">Avançado e Exclusivo Growp</span>, veja abaixo tudo que o growp pode automatizar durante seu lançamento.</p>
-                </div>
-                <div class="section-about__list">
-                    <ul class="section-about__primaryList">
-                        <li>
+                </section>
+                
+                <section class="section-about">
+                    <div class="section-about__title">
+                        <h2>O Que o Growp Faz</h2>
+                        <p>Do <span class="marquee">Básico</span> ao <span class="marquee">Avançado e Exclusivo Growp</span>, veja abaixo tudo que o growp pode automatizar durante seu lançamento.</p>
+                    </div>
+                    <div class="section-about__list">
+                        <ul class="section-about__primaryList">
                             <div class="primaryList__containerDescription">
                                 <span>Recursos Básicos</span>
                             </div>
-                            <div class="primaryList__containerText">
-                                <i class="bi bi-check-circle"></i>
-                                <p>Redirecionamento dos leads para Grupos do Lançamento.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="primaryList__containerText">
-                                <i class="bi bi-check-circle"></i>
-                                <p>Redirecionamento dos leads para Grupos do Lançamento.</p>
-                            </div>
-                        </li>
-                        <li>
+                            <li>
+                                <div class="primaryList__containerText">
+                                    <i class="bi bi-check-circle"></i>
+                                    <p>Redirecionamento dos leads para Grupos do Lançamento.</p>
+                                </div>
+                            </li>
                             <div class="primaryList__containerDescription">
                                 <span>Recurso Avançados e Exclusivos do Growp</span>
                             </div>
-                            <div class="primaryList__containerText">
-                                <i class="bi bi-check-circle"></i>
-                                <p>Mensagens automáticas para todos os Grupos do Lançamento.</p>
+                            <li class="collapse-filter">
+                                <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <div class="primaryList__containerText">
+                                        <i class="bi bi-check-circle"></i>
+                                        <p>Mensagens automáticas para todos os Grupos do Lançamento.</p>
+                                    </div>
+                                </a>
+                                <div class="collapse" type="disc" id="collapseExample">
+                                    <ul class="section-about__secondaryList">
+                                        <li>Mensagens com Texto</li>
+                                        <li>Mensagens com Imagem</li>
+                                        <li>Mensagens com Áudio</li>
+                                        <li>Mensagens com Vídeo</li>
+                                        <li>Mensagens com Arquivos em PDF</li>
+                                        <li>Mensagens com Contatos <br> <span>(ideal para divulgar os Administradores do lançamento e diminuir o índice de fraudes.)</span></li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="primaryList__containerText">
+                                    <i class="bi bi-check-circle"></i>
+                                    <p>Altera o Nome de todos os Grupos do Lançamento.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="primaryList__containerText">
+                                    <i class="bi bi-check-circle"></i>
+                                    <p>Altera a Permissão do envio de mensagens nos grupos.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="primaryList__containerText">
+                                    <i class="bi bi-check-circle"></i>
+                                    <p>Altera Configurações de todos os Grupos do Lançamento.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+            </main>
+
+            <section class="section-paymentPlans">
+                <table class="section-paymentPlans__table">
+                    <thead>
+                        <tr>
+                            <th></th>   <th>Básic</th>  <th>Plus</th>   <th>Professional</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Redirecionamento + Automação</td>
+                            <td class="basic"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+        
+                        <tr>
+                            <td title="Você recebe gratuitamente uma integração com whatsapp, caso desejar mais conexões, você pode adquirir conexões adicionais ilimitadas.">
+                                <details>
+                                    <summary>1 Integração com Whatsapp Grátis</summary>
+                                    <p>Você recebe gratuitamente uma integração com whatsapp, caso desejar mais conexões, você pode adquirir conexões adicionais ilimitadas.</p>
+                                </details>
+                            </td>
+                            <td class="basic"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Tarefas Ilimitadas</td>
+                            <td class="basic"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Leads Ilimitados</td>
+                            <td class="basic"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Integração com Facebook</td>
+                            <td class="basic"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Integração com Google Analytics</td>
+                            <td class="basic"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Integração com Google Tag Manager</td>
+                            <td class="basic"><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Integração com Google Analytics</td>
+                            <td>
+                                <div class="basic">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+        
+                        <tr>
+                            <td>Suporte Via Whatsapp e Email</td>
+                            <td class="basic">
+                                <div class="basic">
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
+                                </div>
+                            </td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                            <td><i class="fa fa-check-circle" aria-hidden="true"></i></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- <section class="section-paymentPlans">
+
+                <div class="section-paymentPlans__item">
+                    <div class="section-paymentPlans__itemTitle">
+                        <h3>Basic</h3>
+                    </div>
+                    <div class="section-paymentPlans__itemContent">
+                        <div class="paymentPlans-itemContent__container">
+                            <div class="paymentPlans-itemContent__prices">
+                                <p><sup>R$</sup><span>147</span><sup>00</sup>/Mensal</p>
                             </div>
-                            <ul class="section-about__secondaryList" type="disc">
-                                <li>Mensagens com Texto</li>
-                                <li>Mensagens com Imagem</li>
-                                <li>Mensagens com Áudio</li>
-                                <li>Mensagens com Vídeo</li>
-                                <li>Mensagens com Arquivos em PDF</li>
-                                <li>Mensagens com Contatos <br> <span>(ideal para divulgar os Administradores do lançamento e diminuir o índice de fraudes.)</span></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <div class="primaryList__containerText">
-                                <i class="bi bi-check-circle"></i>
-                                <p>Altera o Nome de todos os Grupos do Lançamento.</p>
+                        </div>
+
+                        <div class="paymentPlans-itemContent__container">
+                            
+                            <p><strong>Garantia Incondicional:</strong> Em Até 7 dias após a assinatura, o cliente poderá cancelar e solicitar o reembolso total referente a assinatura.</p>
+
+                            <p><strong>Renovação Automática:</strong> As assinaturas são renovadas automáticamente no dia final do ciclo, caso o cliente não desejar mais utilizar a plataforma, o cancelamento deverá ser realizado 3 dias antes de concluir o período, para que a assinatura não seja renovada automáticamente.</p>
+                            
+                            <p><strong><em>* Vídeos, Imagens e Áudios com até 5MB</em></strong></p>
+                            <button><i class="bi bi-cart3"></i><p>Assinar agora</p></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-paymentPlans__item">
+                    <div class="section-paymentPlans__itemTitle">
+                        <h3>Plus</h3>
+                    </div>
+                    <div class="section-paymentPlans__itemContent">
+                        <div class="paymentPlans-itemContent__container">
+                            <div class="paymentPlans-itemContent__prices">
+                                <p><sup>R$</sup><span>187</span><sup>00</sup>/Mensal</p>
                             </div>
-                        </li>
-                        <li>
-                            <div class="primaryList__containerText">
-                                <i class="bi bi-check-circle"></i>
-                                <p>Altera a Permissão do envio de mensagens nos grupos.</p>
+                            
+                        </div>
+
+
+                        <div class="paymentPlans-itemContent__container">
+                            
+                            <p><strong>Garantia Incondicional:</strong> Em Até 7 dias após a assinatura, o cliente poderá cancelar e solicitar o reembolso total referente a assinatura.</p>
+                            
+                            <p><strong>Renovação Automática:</strong> As assinaturas são renovadas automáticamente no dia final do ciclo, caso o cliente não desejar mais utilizar a plataforma, o cancelamento deverá ser realizado 3 dias antes de concluir o período, para que a assinatura não seja renovada automáticamente.</p>
+                            
+                            <p><strong><em>* Vídeos, Imagens e Áudios com até 5MB</em></strong></p>
+                            <button><i class="bi bi-cart3"></i><p>Assinar agora</p></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section-paymentPlans__item">
+                    <div class="section-paymentPlans__itemTitle">
+                        <h3>Profissional</h3>
+                    </div>
+                    <div class="section-paymentPlans__itemContent">
+                        <div class="paymentPlans-itemContent__container">
+                            <div class="paymentPlans-itemContent__prices">
+                                <p><sup>R$</sup><span>289</span><sup>00</sup>/Mensal</p>
                             </div>
-                        </li>
-                        <li>
-                            <div class="primaryList__containerText">
-                                <i class="bi bi-check-circle"></i>
-                                <p>Altera Configurações de todos os Grupos do Lançamento.</p>
-                            </div>
-                        </li>
-                    </ul>
+                            
+                        </div>
+
+                        <div class="paymentPlans-itemContent__container">
+                            
+                            <p><strong>Garantia Incondicional:</strong> Em Até 7 dias após a assinatura, o cliente poderá cancelar e solicitar o reembolso total referente a assinatura.</p>
+                            
+                            <p><strong>Renovação Automática:</strong> As assinaturas são renovadas automáticamente no dia final do ciclo, caso o cliente não desejar mais utilizar a plataforma, o cancelamento deverá ser realizado 3 dias antes de concluir o período, para que a assinatura não seja renovada automáticamente.</p>
+                            
+                            <p><strong><em>* Vídeos, Imagens e Áudios com até 5MB</em></strong></p>
+
+                            <button><i class="bi bi-cart3"></i><p>Assinar agora</p></button>
+                        </div>
+                    </div>
+                </div>
+
+            </section> -->
+
+            <section class="section-newPlan">
+                <div class="newPlan__card">
+                    <div class="section-newPlan__title">
+                        <h3>Planos para Agências e Grandes Lançamentos</h3>
+                    </div>
+                    <div class="section-newPlan__content">
+                        <div class="newtPlan-itemContent__prices">
+                            <p><sup>R$</sup><span><strong>?</strong></span><sup>00</sup>/Mensal</p>
+                        </div>
+                        <div>
+                            <p>Tem Necessidades Maiores que os planos expostos?<br>Entre em contato conosco, temos planos customizados de acordo com a sua necessidade.</p>
+                        </div>
+                        <div>
+                            <p><strong>Entre em Contato pelo email<br><a href="mailto:suporte@growp.app">suporte@growp.app</a></strong></p>
+                        </div>
+                    </div>
                 </div>
             </section>
-        </main>
-
-        <section class="section-paymentPlans">
-
-
-            <div class="section-paymentPlans__item">
-                <div class="section-paymentPlans__itemTitle">
-                    <h3>Basic</h3>
-                </div>
-                <div class="section-paymentPlans__itemContent">
-                    <div class="paymentPlans-itemContent__container">
-                        <div class="paymentPlans-itemContent__prices">
-                            <p><sup>R$</sup><span>147</span><sup>00</sup>/Mensal</p>
-                        </div>
-                        <div>
-                            <p><span class="marquee">Redirecionamento + Automação</span></p>
-                            <h3>1 Integração com Whatsapp <span>Grátis</span></h3>
-                            <p>Você recebe gratuitamente uma integração com whatsapp, caso desejar mais conexões, você pode adquirir conexões adicionais ilimitadas.</p>
-                        </div>
-                            
-                        <div>
-                            <h3>2 Lançamentos Simultâneos Ativos</h3>
-                            <p>Neste Plano você pode realizar <strong>2</strong> lançamentos simultâneos, isso significa que você pode ter <strong>2</strong> lançamentos em atividade com até <strong>5</strong> grupos cada lançamento com tarefas e leads ilimitados.</p>
-                        </div>
-    
-                        <div>
-                            <h3>Até 5 Grupos Ativos</h3>
-                            <p>Permitido até <strong>5</strong> Grupos Ativos em cada Lançamento.</p>
-                        </div>
-    
-                        <div>
-                            <h3>Tarefas Ilimitadas</h3>
-                            <p>Mensagens Automáticas com Texto, Áudio*, Vídeo*, Imagem* e Contatos.<br>Altera os nomes dos Grupos Automáticamente.<br>Habilita e Desabilita envio de mensagens por outros participantes.</p>
-                        </div>
-    
-                        <div>
-                            <h3>Leads Ilimitados</h3>
-                            <p><strong>Integração com Facebook</strong></p>
-                            <p><strong>Integração com Google Analytics</strong></p>
-                            <p><strong>Integração com Google Tag Manager</strong></p>
-                            <p><strong>Suporte Via Whatsapp e Email</strong></p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="paymentPlans-itemContent__container">
-                        <button><i class="bi bi-cart3"></i><p>Assinar agora</p></button>
-
-                        <p><strong>Garantia Incondicional:</strong> Em Até 7 dias após a assinatura, o cliente poderá cancelar e solicitar o reembolso total referente a assinatura.</p>
-
-                        <p><strong>Renovação Automática:</strong> As assinaturas são renovadas automáticamente no dia final do ciclo, caso o cliente não desejar mais utilizar a plataforma, o cancelamento deverá ser realizado 3 dias antes de concluir o período, para que a assinatura não seja renovada automáticamente.</p>
-
-                        <p><strong><em>* Vídeos, Imagens e Áudios com até 5MB</em></strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-paymentPlans__item">
-                <div class="section-paymentPlans__itemTitle">
-                    <h3>Plus</h3>
-                </div>
-                <div class="section-paymentPlans__itemContent">
-                    <div class="paymentPlans-itemContent__container">
-                        <div class="paymentPlans-itemContent__prices">
-                            <p><sup>R$</sup><span>187</span><sup>00</sup>/Mensal</p>
-                        </div>
-                        <div>
-                            <p><span class="marquee">Redirecionamento + Automação</span></p>
-                            <h3>1 Integração com Whatsapp <span>Grátis</span></h3>
-                            <p>Você recebe gratuitamente uma integração com whatsapp, caso desejar mais conexões, você pode adquirir conexões adicionais ilimitadas.</p>
-                        </div>
-                            
-                        <div>
-                            <h3>2 Lançamentos Simultâneos Ativos</h3>
-                            <p>Neste Plano você pode realizar <strong>2</strong> lançamentos simultâneos, isso significa que você pode ter <strong>2</strong> lançamentos em atividade com até <strong>30</strong> grupos cada lançamento com tarefas e leads ilimitados.</p>
-                        </div>
-    
-                        <div>
-                            <h3>Até 30 Grupos Ativos</h3>
-                            <p>Permitido até <strong>30</strong> Grupos Ativos em cada Lançamento.</p>
-                        </div>
-    
-                        <div>
-                            <h3>Tarefas Ilimitadas</h3>
-                            <p>Mensagens Automáticas com Texto, Áudio*, Vídeo*, Imagem* e Contatos.<br>Altera os nomes dos Grupos Automáticamente.<br>Habilita e Desabilita envio de mensagens por outros participantes.</p>
-                        </div>
-    
-                        <div>
-                            <h3>Leads Ilimitados</h3>
-                            <p><strong>Integração com Facebook</strong></p>
-                            <p><strong>Integração com Google Analytics</strong></p>
-                            <p><strong>Integração com Google Tag Manager</strong></p>
-                            <p><strong>Suporte Via Whatsapp e Email</strong></p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="paymentPlans-itemContent__container">
-                        <button><i class="bi bi-cart3"></i><p>Assinar agora</p></button>
-
-                        <p><strong>Garantia Incondicional:</strong> Em Até 7 dias após a assinatura, o cliente poderá cancelar e solicitar o reembolso total referente a assinatura.</p>
-
-                        <p><strong>Renovação Automática:</strong> As assinaturas são renovadas automáticamente no dia final do ciclo, caso o cliente não desejar mais utilizar a plataforma, o cancelamento deverá ser realizado 3 dias antes de concluir o período, para que a assinatura não seja renovada automáticamente.</p>
-
-                        <p><strong><em>* Vídeos, Imagens e Áudios com até 5MB</em></strong></p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="section-paymentPlans__item">
-                <div class="section-paymentPlans__itemTitle">
-                    <h3>Profissional</h3>
-                </div>
-                <div class="section-paymentPlans__itemContent">
-                    <div class="paymentPlans-itemContent__container">
-                        <div class="paymentPlans-itemContent__prices">
-                            <p><sup>R$</sup><span>289</span><sup>00</sup>/Mensal</p>
-                        </div>
-                        <div>
-                            <p><span class="marquee">Redirecionamento + Automação</span></p>
-                            <h3>1 Integração com Whatsapp <span>Grátis</span></h3>
-                            <p>Você recebe gratuitamente uma integração com whatsapp, caso desejar mais conexões, você pode adquirir conexões adicionais ilimitadas.</p>
-                        </div>
-                            
-                        <div>
-                            <h3>3 Lançamentos Simultâneos Ativos</h3>
-                            <p>Neste Plano você pode realizar <strong>3</strong> lançamentos simultâneos, isso significa que você pode ter <strong>3</strong> lançamentos em atividade com até <strong>100</strong> grupos cada lançamento com tarefas e leads ilimitados.</p>
-                        </div>
-    
-                        <div>
-                            <h3>Até 100 Grupos Ativos</h3>
-                            <p>Permitido até <strong>100</strong> Grupos Ativos em cada Lançamento.</p>
-                        </div>
-    
-                        <div>
-                            <h3>Tarefas Ilimitadas</h3>
-                            <p>Mensagens Automáticas com Texto, Áudio*, Vídeo*, Imagem* e Contatos.<br>Altera os nomes dos Grupos Automáticamente.<br>Habilita e Desabilita envio de mensagens por outros participantes.</p>
-                        </div>
-    
-                        <div>
-                            <h3>Leads Ilimitados</h3>
-                            <p><strong>Integração com Facebook</strong></p>
-                            <p><strong>Integração com Google Analytics</strong></p>
-                            <p><strong>Integração com Google Tag Manager</strong></p>
-                            <p><strong>Suporte Via Whatsapp e Email</strong></p>
-                        </div>
-                    </div>
-
-                    <hr>
-
-                    <div class="paymentPlans-itemContent__container">
-                        <button><i class="bi bi-cart3"></i><p>Assinar agora</p></button>
-
-                        <p><strong>Garantia Incondicional:</strong> Em Até 7 dias após a assinatura, o cliente poderá cancelar e solicitar o reembolso total referente a assinatura.</p>
-
-                        <p><strong>Renovação Automática:</strong> As assinaturas são renovadas automáticamente no dia final do ciclo, caso o cliente não desejar mais utilizar a plataforma, o cancelamento deverá ser realizado 3 dias antes de concluir o período, para que a assinatura não seja renovada automáticamente.</p>
-
-                        <p><strong><em>* Vídeos, Imagens e Áudios com até 5MB</em></strong></p>
-                    </div>
-                </div>
-            </div>
-
-        </section>
-
-        <section class="section-newPlan">
-            <div class="newPlan__card">
-                <div class="section-newPlan__title">
-                    <h3>Planos para Agências e Grandes Lançamentos</h3>
-                </div>
-                <div class="section-newPlan__content">
-                    <div class="newtPlan-itemContent__prices">
-                        <p><sup>R$</sup><span><strong>?</strong></span><sup>00</sup>/Mensal</p>
-                    </div>
-                    <div>
-                        <p>Tem Necessidades Maiores que os planos expostos?<br>Entre em contato conosco, temos planos customizados de acordo com a sua necessidade.</p>
-                    </div>
-                    <div>
-                        <p><strong>Entre em Contato pelo email<br><a href="mailto:suporte@growp.app">suporte@growp.app</a></strong></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
+        </div>
     </div>
-
-    <section class="section-paymentPlans">
-        <table>
-            <thead>
-                <th></th>
-                <th>Basic</th>
-                <th>Plus</th>
-                <th>Profissional</th>
-            </thead>
-        </table>
-    </section>
     
     <footer class="footer">
         <div class="container-xxl">
@@ -472,9 +465,18 @@
         </div>
     </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-        <script src="js/main.js"></script>
-        <script src="https://kit.fontawesome.com/8c67e1db15.js" crossorigin="anonymous"></script>
+    <div class="container-checkbox fixed-bottom">
+        <label class="dark-theme-label">
+            <input class="dark-theme-input" type="checkbox" data-js="input">
+            <span class="dark-theme-span"></span>
+            <!-- <p>Theme</p> -->
+        </label>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/8c67e1db15.js" crossorigin="anonymous"></script>
+    <script src="js/main.js"></script>
+
 </body>
 </html>
