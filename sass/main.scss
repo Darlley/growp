@@ -139,6 +139,10 @@ body {
             }
 
         }
+
+        .navbar-nav:first-child{
+            margin-left: 2rem;
+        }
         
         .nav-link{
             &.dashboard{
@@ -146,6 +150,7 @@ body {
                 padding: .5rem 1rem;
                 border-radius: 6px;
                 margin-left: 1rem;
+                width: max-content;
                 
                 &:hover{
                     transition: all 1s;
@@ -1311,6 +1316,14 @@ body {
 
 @media (max-width: 992px) {
     body{
+        .navbar {
+            .navbar-nav:first-child{
+                margin-left: 0;
+            }
+            .nav-link.dashboard{
+                margin-left: 0;
+            }
+        }
         .header{
             .header__presentation{
 
