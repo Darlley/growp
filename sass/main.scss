@@ -137,11 +137,28 @@ body {
                 font-size: 1.5rem;
                 text-transform: uppercase;
             }
+
+        }
+        
+        .nav-link{
+            &.dashboard{
+                background-color: $darkPurple;
+                padding: .5rem 1rem;
+                border-radius: 6px;
+                margin-left: 1rem;
+                
+                &:hover{
+                    transition: all 1s;
+                    background-color: $lightPurple;
+                    color: $lightColor !important;
+                }
+            }
+            
+            &:hover{
+                color: #ddd !important;
+            }
         }
 
-        .nav-link:hover{
-            color: $darkPurple !important;
-        }
 
         .collapse.navbar-collapse{
             position: relative;
@@ -168,6 +185,7 @@ body {
                     
                     p{
                         font-size: 1.5rem;
+                        color: $textColor;
                     }
     
                     h1{
@@ -373,7 +391,7 @@ body {
                             font-weight: bold;
                         }
                         p{
-                            color: $darkColor;
+                            color: $textColor;
                         }
                     }
                     .description-container__image{
@@ -402,6 +420,9 @@ body {
                     h2{
                         font-size: 3rem;
                         margin-bottom: 2rem;
+                    }
+                    p{
+                        color: $textColor;
                     }
                 }
                 .section-about__list{
@@ -436,16 +457,16 @@ body {
                                 display: flex;
                                 align-items: center;
                                 gap: 1rem;
-                                color: $darkPurple;
                                 font-weight: bold;
+                                color: $lightColor;
     
                                 i{
-                                    margin-left: 1rem;
+                                    margin-left: .5rem;
+                                    display: inline-block;
                                 }
-                                i, p{
-                                    color: $lightColor;
-                                    font-size: 1rem;
+                                p{
                                     margin-bottom: 0;
+                                    display: inline-block;
                                 }
                             }
                         }
@@ -481,10 +502,11 @@ body {
             // display: flex;
             // justify-content: center;
             // gap: 1rem;
-
+            
             .section-paymentPlans__table{
                 width: 100%;
                 display: flex;
+                box-sizing: content-box;
                 
                 // box-shadow: 0px 0px 15px 5px #00000010;
                 border-radius: 4px;
@@ -502,8 +524,9 @@ body {
 
                 .item{
                     display: flex;
+                    flex-direction: column;
                     align-items: center;
-                    font-size: 1.5rem;
+                    justify-content: center;
 
                     abbr{
                         text-decoration: none;
@@ -513,7 +536,7 @@ body {
                 &.linha--h{
                     // min-height: 120px;
                     // min-height: 200px;
-                    min-height: 200px;
+                    min-height: 160px;
                 }
                 &.no-visibleTable{
                     visibility: hidden;
@@ -531,6 +554,7 @@ body {
                     .item{
                         color: #777777;
                         justify-content: flex-start;
+                        font-size: 1.2rem;
 
                         details p {
                             margin: 0;
@@ -544,11 +568,16 @@ body {
                 border-radius: 8px;
                 display: flex;
                 flex: 5;
-
+                
                 overflow-x: auto;
-
+                scrollbar-color: $lightGreen $lightPurple;
+                scrollbar-width: thin;
+                
                 .coluna{
                     flex: 1;
+
+                    border-radius: 8px;
+                    margin: 0.5rem;
                     
                     .linha{
                         display: flex;
@@ -559,6 +588,7 @@ body {
                             justify-content: center;
                             width: 100%;
                             color: #6576ff;
+                            font-size: 1.5rem;
 
                             color: $darkPurple;
                             
@@ -579,12 +609,55 @@ body {
                                     background-color: $lightPurple;
                                 }
                             }
+
+                            abbr{
+                                position: relative;
+                            }
+                            abbr[title]::after {
+                                content: "";
+                                position: absolute;
+                                width: 4px;
+                                height: 4px;
+                                border-radius: 50%;
+                                background-color: $lightGreen;
+                                top: 5px;
+                                right: -10px;
+                            }
+
+                            .prices{
+                                height: min-content;
+                                font-weight: bold;
+
+                                p:first-child{
+                                    font-size: 1.5rem;
+                                    position: relative;
+                                    margin-bottom: 0;
+                                    
+                                    &:before{
+                                        content: "R$";
+                                        position: absolute;
+                                        font-size: .6rem;
+                                        top: 10px;
+                                        left: -10px;
+                                    }
+                                    &:after{
+                                        font-size: .6rem;
+                                        content: ".00";
+                                        top: 10px;
+                                        position: absolute;
+                                    }
+                                }
+                                span{
+                                    font-size: .9rem;
+                                }
+                            }
                         }
                     }
 
 
                     &:hover{
                         background-color: $darkPurple;
+
                         
                         .linha .item {
                             color: $lightColor;
@@ -595,7 +668,7 @@ body {
                         }
                     }
 
-                    &.coluna-4{
+                    /* &.coluna-2{
                         background-color: $darkPurple;
 
                         .linha .item{
@@ -605,7 +678,7 @@ body {
                                 background-color: $lightPurple;
                             }
                         }
-                    }
+                    } */
                     
                 }
                 
@@ -620,7 +693,6 @@ body {
                     border-top: 2px solid #EFEFEF;
                 }
             }
-
             /*
             .coluna{
                 padding: 1rem;
@@ -925,6 +997,7 @@ body {
         .section-newPlan{
             width: 100%;
             margin: 3rem 0;
+            color: $textColor;
             
             .newPlan__card{
                 width: 90%;
@@ -979,7 +1052,8 @@ body {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 3rem 0; 
+        margin: 3rem 0;
+        color: $textColor;
     }
 
     .section-form{
@@ -1164,17 +1238,6 @@ body {
             .main{
                .section-description{
                     margin-top: 6rem;
-    
-                    .section-description__container{
-                        .description-container__text{
-                            p{
-                                color: $textColor;
-                            }
-                        }
-                    }
-                }
-                p{
-                    color: $textColor;
                 }
 
             }
@@ -1185,12 +1248,15 @@ body {
                 .section-paymentPlans__itemContent{
                     background-color: $darkColor;
                 }
+
+                .section-paymentPlans__table .table__content .coluna{
+                    border: 2px solid $darkPurple;
+                }
+
+
             }
 
             .section-newPlan{
-                p, h3{
-                    color: $textColor;
-                }
                 .section-newPlan__content{
                     background-color: $darkColor;
                 }
@@ -1200,11 +1266,6 @@ body {
         .footer{
             background-color: $darkColor;
 
-            .section-last{
-                > p{
-                    color: $textColor;
-                }
-            }
             .section-form{
                 .section-form__group div p{
                     color: $textColor;
@@ -1428,51 +1489,64 @@ body {
                     width: 100%;
                     max-width: 600px;
                     margin: auto;
-                }
-
-                .linha{
-                    display: flex;
-                    align-items: center;
-                    min-height: 140px;
+                    
+                    .coluna{
     
-                    .item{
-                        display: flex;
-                        align-items: center;
-                        padding: 1rem;
-                    }
+                        .linha{
+                            display: flex;
+                            align-items: center;
+                            min-height: 125px;
+            
+                            .item{
+                                display: flex;
+                                align-items: center;
+                                padding: 1rem;
+                                
+                                abbr{
+                                    max-height: 80px;
+                                    overflow: auto;
+                                    line-height: .5rem;
+                                    background-color: $darkPurple;
+                                    color: $lightColor;
+                                    padding: .4rem;
+                                    border-radius: 4px;
+                                    
+                                    &::-webkit-scrollbar{
+                                        width: 5px;
+                                    }
+                                    &::-webkit-scrollbar-thumb{
+                                        background: $lightGreen;
+                                    }
+                                    &::-webkit-scrollbar-track{
+                                        background-color: $lightPurple;
+                                    }
+                                    
+                                    &[title]::after {
+                                        content: " (" attr(title) ") ";
+                                        font-size: .8rem;
 
-                    abbr{
-                        max-height: 80px;
-                        overflow: auto;
-                        line-height: .5rem;
-                        background-color: $darkPurple;
-                        color: $lightColor;
-                        padding: .5rem;
-                        border-radius: 4px;
-                        
-                        &::-webkit-scrollbar{
-                            width: 5px;
+                                        position: inherit;
+                                        width: 100%;
+                                        height: inherit;
+                                        border-radius: none;
+                                        background: none;
+                                        top: 0;
+                                        left: 0;
+                                    }
+                                }
+                            }
+            
+                            &.linha--h{
+                                min-height: 460px;
+                            }
                         }
-                        &::-webkit-scrollbar-thumb{
-                            background: $lightGreen;
-                        }
-                        &::-webkit-scrollbar-track{
+        
+                        &:hover .linha .item abbr{
                             background-color: $lightPurple;
                         }
                     }
-                    abbr[title]::after {
-                        content: " (" attr(title) ") ";
-                        font-size: .8rem;
-                    }
-    
-                    &.linha--h{
-                        min-height: 600px;
-                    }
                 }
 
-                .coluna:hover .linha .item abbr{
-                    background-color: $lightPurple;
-                }
 
                 /* .section-paymentPlans__table{
                     max-width: 600px;

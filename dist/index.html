@@ -25,22 +25,19 @@
             </button>
             <div class="collapse navbar-collapse justify-content-lg-end" id="navbarSupportedContent">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    <a class="nav-link active" href="#">Features</a>
-                    <a class="nav-link active" href="#">Pricing</a>
-                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Dashboard</a>
+                    <a class="nav-link active" aria-current="page" href="#inicio">Home</a>
+                    <a class="nav-link active" href="#sobre">Sobre</a>
+                    <a class="nav-link active" href="#precos">Planos</a>
+                    <a class="nav-link active dashboard" target="_blank" href="https://dashboard.growp.app/" tabindex="-1" aria-disabled="true">Dashboard</a>
                 </div>
             </div>
         </div>
         <div class="navbar-filter"></div>
     </nav>
     
-    <header class="header">
+    <header class="header" id="inicio">
         <div class="hader__banner">
-            <div class="banner__filter"></div>
-
             <picture>
-                <!-- <source media="(min-width:650px)" srcset="img_pink_flowers.jpg"> -->
                 <source media="(max-width: 700px)" srcset="img/banner-600x400.png">
                 <source media="(max-width:1600px)" srcset="img/banner-1600x600.png">
                 <img src="img/banner-3000x400.jpg" alt="Flowers" style="width:auto;">
@@ -76,7 +73,7 @@
     <div class="app">
         <div class="container-xxl">
             <main class="main container-xxl">
-                <section class="section-timeline">
+                <section class="section-timeline" id="sobre">
                     <div class="section-timeline__title">
                         <h2>Automatize seus Lançamentos em 4 Passo Simples.</h2>
                     </div>
@@ -180,7 +177,7 @@
                             </div>
                             <li>
                                 <div class="primaryList__containerText">
-                                    <i class="bi bi-check-circle"></i>
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
                                     <p>Redirecionamento dos leads para Grupos do Lançamento.</p>
                                 </div>
                             </li>
@@ -190,7 +187,7 @@
                             <li>
                                 <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
                                     <div class="primaryList__containerText">
-                                        <i class="bi bi-check-circle"></i>
+                                        <i class="fa fa-check-circle" aria-hidden="true"></i>
                                         <p>Mensagens automáticas para todos os Grupos do Lançamento.</p>
                                     </div>
                                 </a>
@@ -207,19 +204,19 @@
                             </li>
                             <li>
                                 <div class="primaryList__containerText">
-                                    <i class="bi bi-check-circle"></i>
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
                                     <p>Altera o Nome de todos os Grupos do Lançamento.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="primaryList__containerText">
-                                    <i class="bi bi-check-circle"></i>
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
                                     <p>Altera a Permissão do envio de mensagens nos grupos.</p>
                                 </div>
                             </li>
                             <li>
                                 <div class="primaryList__containerText">
-                                    <i class="bi bi-check-circle"></i>
+                                    <i class="fa fa-check-circle" aria-hidden="true"></i>
                                     <p>Altera Configurações de todos os Grupos do Lançamento.</p>
                                 </div>
                             </li>
@@ -228,7 +225,7 @@
                 </section>
             </main>
 
-            <section class="section-paymentPlans">
+            <section class="section-paymentPlans" id="planos">
 
                 <div class="section-paymentPlans__table">
 
@@ -327,7 +324,15 @@
                                     <div class="item"><abbr title="Permitido até 5 Grupos Ativos em cada Lançamento.">5</abbr></div>
                                 </div>
                                 <div class="linha">
-                                    <div class="item"><button>Assinar</button></div>
+                                    <div class="item">
+                                        <div>
+                                            <button>Assinar</button>
+                                        </div>
+                                        <div class="prices">
+                                            <p>147</p>
+                                            <span>Mensal</span>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -370,7 +375,17 @@
                                     <div class="item"><abbr title="Permitido até 30 Grupos Ativos em cada Lançamento.">30</abbr></div>
                                 </div>
                                 <div class="linha">
-                                    <div class="item"><button>Assinar</button></div>
+                                    <div class="item">
+                                        <div>
+                                            <button>Assinar</button>
+                                        </div>
+                                        <div>
+                                            <div class="prices">
+                                                <p>187</p>
+                                                <span>Mensal</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -417,7 +432,17 @@
                                     </div>
                                 </div>
                                 <div class="linha">
-                                    <div class="item"><button>Assinar</button></div>
+                                    <div class="item">
+                                        <div>
+                                            <button>Assinar</button>
+                                        </div>
+                                        <div>
+                                            <div class="prices">
+                                                <p>289</p>
+                                                <span>Mensal</span>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
