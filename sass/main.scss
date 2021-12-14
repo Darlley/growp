@@ -47,6 +47,11 @@ h1, h2{
  */
 .container-checkbox{
     padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 50%;
+
 
     .dark-theme-label{
         display: flex;
@@ -107,6 +112,36 @@ h1, h2{
     }
 }
 
+.whatsapp-container{
+    position: fixed;
+    bottom: 0;
+    right: 0px;
+    margin: 1rem;
+
+    width: 100px;
+    height: 100px;
+    background-color: #128c7e;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+        font-size: 3rem;
+        text-decoration: none;
+        color: $lightColor;
+        padding: 0;
+        margin: 0;
+    }
+
+    &:hover{
+        transition: all 1s;
+        background-color: #0b5c52;
+    }
+}
+
 html,
 body {
     font-family: 'Molengo', sans-serif;
@@ -116,7 +151,7 @@ body {
     position: relative;
 
     .navbar{
-        background-color: #00000062;
+        background-color: #00000083;
         
         .container {
             position: relative;
